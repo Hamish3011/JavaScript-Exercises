@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="explanationBox">
+        <h2> Exercise 0 - Getting things set up </h2>
+        <p>
+            JavaScript is a programming language that is used to make websites interactive.
+            For this reason we need to use a simple website to test our code.
+            <br>
+            Copy the code below and paste it into your own index.html file. We can then start writing JavaScript code in
+            a main.js file within the same folder.
+        </p>
+    </div>
+
+    <div class="codeBox">
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Exercise Template&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;
+        The is the website for our exercises on variables in JavaScript.
+    &lt;/h1&gt;
+    &lt;p&gt;Open the console by pressing Ctrl + shift + J or right click and select inspect element&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+        </pre>
+    </div>
+
+    <div class="explanationBox">
+        <h2> Exercise 1 - Playing with variables</h2>
+        <p>
+            Let's start with numbers and doing some basic math. <br>
+            Create the following variables in the main.js file and initialise them to the correct values:
+        </p>
+        <ul>
+            <li> a = 2 </li>
+            <li> b = 3 </li>
+            <li> c = 4 </li>
+            <li> d = 5 </li>
+            <li> e = 6 </li>
+        </ul>
+
+        <p>To do math in JavaScript we can use the same operators as we would in Python. i.e., + - * / for plus, minus,
+            times and divide respectively.</p>
+        <br>
+        <p>Using the above variables, find any equation that sums to the following numbers and output it to the console:
+        </p>
+        <ul>
+            <li> 9 </li>
+            <li> 20 </li>
+            <li> 30 </li>
+            <li> 100 </li>
+            <li> 1 </li>
+        </ul>
+    </div>
+
+    <div class="explanationBox">
+        <h2> Exercise 2 - More playing with variables</h2>
+        <p>
+            Variables can be declared without initialising them for example<br>
+        </p>
+
+        <div class="codeBox">
+            <pre>
+let myFirstVariable; // This variable is declared but not initialised
+            </pre>
+        </div>
+        <p>Try different things and answer the following questions:</p>
+        <ol>
+            <li>What is the value of this variable when you print it?</li>
+            <li>What happens if you try to use a variable that has not been initialised?</li>
+            <li>What happens if you try to use a variable that has not been declared?</li>
+            <li>Is this the same for a constant?</li>
+            <li>What happens if you try to declare a variable with the same name as a reserved word?</li>
+        </ol>
+
+        <p>
+            You may have noticed that we don't tell JavaScript what type of variable we are declaring. This is because
+            JavaScript is a dynamically typed language. This means that the type of the variable is determined at
+            runtime. This is different from statically typed languages like Java or C++ where the type of the variable
+            must be declared by the programmer.
+        </p>
+        <p>
+            Try the following in the main.js file to see how JavaScript handles differnt data types:
+        </p>
+        <ul>
+            <li>Declare a variable and initialise it to a number</li>
+            <li>Declare a variable and initialise it to a string</li>
+            <li>What happens when you add two variables containing numbers together</li>
+            <li>What happens when you add two variables containing strings together</li>
+            <li>What happens when you add a number to a string</li>
+            <li>Does this change if you change the order of the variables being added.</li>
+            <li>What can we do to convert the string to a number?</li>
+    </div>
+
+    <div class="explanationBox">
+        <h2> Exercise 3 - Input and Output</h2>
+        <p>
+            Copy the starter code given below and adjust it so that it can complete the following tasks:
+        </p>
+        <ol>
+            <li>It also replies back with their last name.</li>
+            <li>It tells them how old they are in dog years (their age times 7)</li>
+            <li>It has an extra field to answer another question of your choice, and then does something with that
+                question</li>
+        </ol>
+        <div class="codeBox">
+            <pre>
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt; Exercise 1.1 - Input Output &lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: #aaf2bd;
+            margin: 20%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+
+    &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;first-name&quot; name=&quot;fname&quot;&gt;
+    &lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+    &lt;label for=&quot;age&quot;&gt;Age: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;your-age&quot; name=&quot;age&quot;&gt;
+    &lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;the-button&quot;&gt;Generate Replies&lt;/button&gt;
+
+    &lt;div id=&quot;answer-box&quot;&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    document.getElementById(&quot;the-button&quot;).addEventListener(&quot;click&quot;, generateReplies);
+    function generateReplies() {
+        var name = document.getElementById(&quot;first-name&quot;).value;
+        document.getElementById(&quot;answer-box&quot;).innerHTML = &quot;Nice to meet you &quot; + name + &quot;!&quot;;
+    }
+&lt;/script&gt;
+            </pre>
+        </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title> Exercise 1.1 - Input Output </title>
+    <style>
+        body {
+            background-color: #aaf2bd;
+            margin: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <label for="fname">First name:</label>
+    <input type="text" id="first-name" name="fname">
+    <br> <br> <br>
+
+    <label for="age">Age: </label>
+    <input type="text" id="your-age" name="age">
+    <br> <br> <br>
+
+    <button type="button" id="the-button">Generate Replies</button>
+
+    <div id="answer-box">
+
+    </div>
+</body>
+<script>
+    document.getElementById("the-button").addEventListener("click", generateReplies);
+    function generateReplies() {
+        var name = document.getElementById("first-name").value;
+        document.getElementById("answer-box").innerHTML = "Nice to meet you " + name + "!";
+    }
+</script>
