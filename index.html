@@ -9,19 +9,33 @@
 </head>
 
 <body>
-    <div class="explanationBox">
-        <h2> Exercise 1-A - Getting things set up </h2>
-        <p>
-            JavaScript is a programming language that is used to make websites interactive.
-            For this reason we need to use a simple website to test our code.
-            <br>
-            Copy the code below and paste it into your own index.html file. We can then start writing JavaScript code in
-            a main.js file within the same folder.
-        </p>
+    <div class="header">
+        <h1>JavaScript Exercises</h1>
+        <nav>
+            <ul>
+                <li><a href="#ex1a">Exercise 1-A</a></li>
+                <li><a href="#ex1b">Exercise 1-B</a></li>
+                <li><a href="#ex1c">Exercise 1-C</a></li>
+                <li><a href="#ex1d">Exercise 1-D</a></li>
+            </ul>
+        </nav>
     </div>
+    <div class="main">
+        <div>
+            <div id="ex1a" class="explanationBox">
+                <h2> Exercise 1-A - Getting things set up </h2>
+                <p>
+                    JavaScript is a programming language that is used to make websites interactive.
+                    For this reason we need to use a simple website to test our code.
+                    <br>
+                    Copy the code below and paste it into your own index.html file. We can then start writing JavaScript
+                    code in
+                    a main.js file within the same folder.
+                </p>
+            </div>
 
-    <div class="codeBox">
-        <pre>
+            <div class="codeBox">
+                <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
@@ -42,95 +56,101 @@
 
 &lt;/html&gt;
         </pre>
-    </div>
+            </div>
 
-    <div class="explanationBox">
-        <h2> Exercise 1-B - Playing with variables</h2>
-        <p>
-            Let's start with numbers and doing some basic math. <br>
-            Create the following variables in the main.js file and initialise them to the correct values:
-        </p>
-        <ul>
-            <li> a = 2 </li>
-            <li> b = 3 </li>
-            <li> c = 4 </li>
-            <li> d = 5 </li>
-            <li> e = 6 </li>
-        </ul>
+            <div id="ex1b" class="explanationBox">
+                <h2> Exercise 1-B - Playing with variables</h2>
+                <p>
+                    Let's start with numbers and doing some basic math. <br>
+                    Create the following variables in the main.js file and initialise them to the correct values:
+                </p>
+                <ul>
+                    <li> a = 2 </li>
+                    <li> b = 3 </li>
+                    <li> c = 4 </li>
+                    <li> d = 5 </li>
+                    <li> e = 6 </li>
+                </ul>
 
-        <p>To do math in JavaScript we can use the same operators as we would in Python. i.e., + - * / for plus, minus,
-            times and divide respectively.</p>
-        <br>
-        <p>Using the above variables, find any equation that sums to the following numbers and output it to the console:
-        </p>
-        <ul>
-            <li> 9 </li>
-            <li> 20 </li>
-            <li> 30 </li>
-            <li> 100 </li>
-            <li> 1 </li>
-        </ul>
-    </div>
+                <p>To do math in JavaScript we can use the same operators as we would in Python. i.e., + - * / for plus,
+                    minus,
+                    times and divide respectively.</p>
+                <br>
+                <p>Using the above variables, find any equation that sums to the following numbers and output it to the
+                    console:
+                </p>
+                <ul>
+                    <li> 9 </li>
+                    <li> 20 </li>
+                    <li> 30 </li>
+                    <li> 100 </li>
+                    <li> 1 </li>
+                </ul>
+            </div>
 
-    <div class="explanationBox">
-        <h2> Exercise 1-C - More playing with variables</h2>
-        <p>
-            Variables can be declared without initialising them for example<br>
-        </p>
+            <div id="ex1c" class="explanationBox">
+                <h2> Exercise 1-C - More playing with variables</h2>
+                <p>
+                    Variables can be declared without initialising them for example<br>
+                </p>
 
-        <div class="codeBox">
-            <pre>
+                <div class="codeBox">
+                    <pre>
 let myFirstVariable; // This variable is declared but not initialised
             </pre>
-        </div>
-        <p>Try different things and answer the following questions:</p>
-        <ol>
-            <li>What is the value of this variable when you print it?</li>
-            <li>What happens if you try to use a variable that has not been initialised?</li>
-            <li>What happens if you try to use a variable that has not been declared?</li>
-            <li>Is this the same for a constant?</li>
-            <li>What happens if you try to declare a variable with the same name as a reserved word?</li>
-        </ol>
+                </div>
+                <p>Try different things and answer the following questions:</p>
+                <ol>
+                    <li>What is the value of this variable when you print it?</li>
+                    <li>What happens if you try to use a variable that has not been initialised?</li>
+                    <li>What happens if you try to use a variable that has not been declared?</li>
+                    <li>Is this the same for a constant?</li>
+                    <li>What happens if you try to declare a variable with the same name as a reserved word?</li>
+                </ol>
 
-        <p>
-            You may have noticed that we don't tell JavaScript what type of variable we are declaring. This is because
-            JavaScript is a dynamically typed language. This means that the type of the variable is determined at
-            runtime. This is different from statically typed languages like Java or C++ where the type of the variable
-            must be declared by the programmer.
-        </p>
-        <p>
-            Try the following in the main.js file to see how JavaScript handles differnt data types:
-        </p>
-        <ul>
-            <li>Declare a variable and initialise it to a number</li>
-            <li>Declare a variable and initialise it to a string</li>
-            <li>What happens when you add two variables containing numbers together</li>
-            <li>What happens when you add two variables containing strings together</li>
-            <li>What happens when you add a number to a string</li>
-            <li>Does this change if you change the order of the variables being added.</li>
-            <li>What can we do to convert the string to a number?</li>
-    </div>
+                <p>
+                    You may have noticed that we don't tell JavaScript what type of variable we are declaring. This is
+                    because
+                    JavaScript is a dynamically typed language. This means that the type of the variable is determined
+                    at
+                    runtime. This is different from statically typed languages like Java or C++ where the type of the
+                    variable
+                    must be declared by the programmer.
+                </p>
+                <p>
+                    Try the following in the main.js file to see how JavaScript handles differnt data types:
+                </p>
+                <ul>
+                    <li>Declare a variable and initialise it to a number</li>
+                    <li>Declare a variable and initialise it to a string</li>
+                    <li>What happens when you add two variables containing numbers together</li>
+                    <li>What happens when you add two variables containing strings together</li>
+                    <li>What happens when you add a number to a string</li>
+                    <li>Does this change if you change the order of the variables being added.</li>
+                    <li>What can we do to convert the string to a number?</li>
+            </div>
 
-    <div class="explanationBox">
-        <h2> Exercise D - Input and Output</h2>
-        <p>
-            Copy the starter code given below and adjust it so that it can complete the following tasks:
-        </p>
-        <ol>
-            <li>It also replies back with their last name.</li>
-            <li>It tells them how old they are in dog years (their age times 7)</li>
-            <li>It has an extra field to answer another question of your choice, and then does something with that
-                question</li>
-        </ol>
-        <div class="codeBox">
-            <pre>
+            <div id="ex1d" class="explanationBox">
+                <h2> Exercise D - Input and Output</h2>
+                <p>
+                    Copy the starter code given below and adjust it so that it can complete the following tasks:
+                </p>
+                <ol>
+                    <li>It also replies back with their last name.</li>
+                    <li>It tells them how old they are in dog years (their age times 7)</li>
+                    <li>It has an extra field to answer another question of your choice, and then does something with
+                        that
+                        question</li>
+                </ol>
+                <div class="codeBox">
+                    <pre>
 &lt;html&gt;
 
 &lt;head&gt;
     &lt;title&gt; Exercise 1-D - Input and Output &lt;/title&gt;
     &lt;style&gt;
         body {
-            background-color: #aaf2bd;
+            background-color: #034217;
             margin: 20%;
         }
     &lt;/style&gt;
@@ -161,7 +181,8 @@ let myFirstVariable; // This variable is declared but not initialised
     }
 &lt;/script&gt;
             </pre>
-        </div>
+                </div>
+            </div>
 </body>
 
 <script src="main.js"></script>

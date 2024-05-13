@@ -1,16 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const codeBlocks = document.querySelectorAll('pre code');
+function myFunction(element) {
+    navigator.clipboard.writeText(element.target.parentElement.children[1].innerText);
+    element.target.innerHTML = 'Copied!';
+    setTimeout(() => {
+        element.target.innerHTML = 'Copy';
+    }, 2000);
+}
 
-    codeBlocks.forEach(code => {
-        const text = code.innerText;
-        const lines = text.split('\n').length - 1;
-        let numberLine = '<span aria-hidden="true" class="line-numbers-rows">';
-
-        for (let i = 1; i <= lines; i++) {
-            numberLine += i + '<br>';
-        }
-        numberLine += '</span>';
-
-        code.innerHTML = numberLine + code.innerHTML;
-    });
-});
+let codeBoxes = document.querySelectorAll('.codeBox');
+let copyBottons = [];
+for (let index = 0; index < codeBoxes.length; index++) {
+    // Create a button
+    let button = document.createElement('button');
+    button.innerHTML = 'Copy';
+    button.className = 'copyCodeButton';
+    button.addEventListener('click', myFunction);
+    // Add the button to the code box
+    codeBoxes[index].insertBefore(button, codeBoxes[index].firstChild);
+    copyBottons.push(button);
+}
