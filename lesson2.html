@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 12 JavaScript Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>JavaScript Exercises</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="index.html">Lesson 1</a></button>
+                <div class="dropdown-content">
+                    <a href="index.html#ex1a">Exercise 1-A</a>
+                    <a href="index.html#ex1b">Exercise 1-B</a>
+                    <a href="index.html#ex1c">Exercise 1-C</a>
+                    <a href="index.html#ex1d">Exercise 1-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn current_page"><a href="lesson2.html">Lesson 2</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson2.html#ex2a">Exercise 2-A</a>
+                    <a href="lesson2.html#ex2b">Exercise 2-B</a>
+                    <a href="lesson2.html#ex2c">Exercise 2-C</a>
+                </div>
+            </div>
+            <ul>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <div id="ex2a" class="explanationBox">
+            <h2> Exercise A - Input and Output</h2>
+            <p>
+                Copy the starter code given below and adjust it so that it can complete the following tasks:
+            </p>
+            <ol>
+                <li>It also replies back with their last name.</li>
+                <li>It tells them how old they are in dog years (their age times 7)</li>
+                <li>It has an extra field to answer another question of your choice, and then does something with
+                    that
+                    question</li>
+            </ol>
+            <h3>index.html</h3>
+            <div class="codeBox">
+                <pre>
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt; Exercise 1-D - Input and Output &lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: #034217;
+            margin: 20%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+
+    &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;first-name&quot; name=&quot;fname&quot;&gt;
+    &lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+    &lt;label for=&quot;age&quot;&gt;Age: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;your-age&quot; name=&quot;age&quot;&gt;
+    &lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;the-button&quot;&gt;Generate Replies&lt;/button&gt;
+
+    &lt;div id=&quot;answer-box&quot;&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+            </pre>
+            </div>
+            <h3>main.js</h3>
+            <div class="codeBox">
+                <pre>
+document.getElementById(&quot;the-button&quot;).addEventListener(&quot;click&quot;, generateReplies);
+function generateReplies() {
+    var name = document.getElementById(&quot;first-name&quot;).value;
+    document.getElementById(&quot;answer-box&quot;).innerHTML = &quot;Nice to meet you &quot; + name + &quot;!&quot;;
+}
+                </pre>
+            </div>
+        </div>
+
+        <!-- Exercise 2 B -->
+        <div id="ex2b" class="explanationBox">
+            <h2> Exercise B - Randomness</h2>
+            <p>
+                This time you don't get any starter code!
+            </p>
+            <p>
+                Your task is to make a website with a button, that each time they press it will give a random fortune
+                out of 100.
+            </p>
+            <p>
+                If you are struggling to get started, have a look at the Math.random() function in the JavaScript
+                documentation.
+            </p>
+        </div>
+
+        <!-- Exercise 2 C -->
+        <div id="ex2c" class="explanationBox">
+            <h2> Exercise C - Randomness expanded</h2>
+            <p>
+                Continue from the previous exercise and expand your program to include the following:
+            </p>
+            <ol>
+                <li>It should tell them their fortune in a sentence.</li>
+                <li>It should also tell them how many times they have pressed the button.</li>
+                <li>Show me another feature that uses variables and or randomness.</li>
+            </ol>
+        </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
