@@ -18,3 +18,33 @@ for (let index = 0; index < codeBoxes.length; index++) {
     codeBoxes[index].insertBefore(button, codeBoxes[index].firstChild);
     copyBottons.push(button);
 }
+
+
+// Setting colours
+let root = document.querySelector(':root');
+// console.log(localStorage.getItem('colour-mode'));
+localStorage.getItem('colour-mode') === 'katelin' ? setKatelinColours() : setDefaultColours();
+document.getElementById('button_default').addEventListener('click', setDefaultColours);
+document.getElementById('button_katelin').addEventListener('click', setKatelinColours);
+
+function setDefaultColours() {
+    root.style.setProperty('--primary-color', '#E8DBC5');
+    root.style.setProperty('--secondary-color', '#333');
+    root.style.setProperty('--hover-color', 'gray');
+    root.style.setProperty('--explanation-color', 'white');
+    root.style.setProperty('--header-text-color', 'white');
+    root.style.setProperty('--text-color', 'black');
+    localStorage.setItem('colour-mode', 'default');
+    // console.log(localStorage.getItem('colour-mode'));
+}
+
+function setKatelinColours() {
+    root.style.setProperty('--primary-color', '#FF47DA');
+    root.style.setProperty('--secondary-color', '#ACF39D');
+    root.style.setProperty('--hover-color', '#8dc981');
+    root.style.setProperty('--explanation-color', '#FFBF2A');
+    root.style.setProperty('--header-text-color', '#222222');
+    root.style.setProperty('--text-color', '#222222');
+    localStorage.setItem('colour-mode', 'katelin');
+    // console.log(localStorage.getItem('colour-mode'));
+}
