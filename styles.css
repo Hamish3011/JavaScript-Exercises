@@ -18,14 +18,12 @@ body {
 
 .main {
     padding: 50px 20% 0% 20%;
-    margin-top: 112px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     background-color: var(--secondary-color);
-    max-height: 112px;
 }
 
 .header h1 {
