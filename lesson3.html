@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 12 JavaScript Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>JavaScript Exercises</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="index.html">Lesson 1</a></button>
+                <div class="dropdown-content">
+                    <a href="index.html#ex1a">Exercise 1-A</a>
+                    <a href="index.html#ex1b">Exercise 1-B</a>
+                    <a href="index.html#ex1c">Exercise 1-C</a>
+                    <a href="index.html#ex1d">Exercise 1-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn current_page"><a href="lesson2.html">Lesson 2</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson2.html#ex2a">Exercise 2-A</a>
+                    <a href="lesson2.html#ex2b">Exercise 2-B</a>
+                    <a href="lesson2.html#ex2c">Exercise 2-C</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn current_page"><a href="lesson3.html">Lesson 3</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson3.html#ex3a">Exercise 3-A</a>
+                    <a href="lesson3.html#ex3b">Exercise 3-B</a>
+                    <a href="lesson3.html#ex3c">Exercise 3-C</a>
+                    <a href="lesson3.html#ex3d">Exercise 3-D</a>
+                </div>
+            </div>
+            <ul>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <!-- Info -->
+        <div id="ex3a" class="explanationBox">
+            <h2>Operators</h2>
+            <p>
+                Sometimes our conditions within an if statement are a bit more complex and require a combination of
+                expressions, connected by one or more of the logical operators
+
+            </p>
+            <ul>
+                <li>AND (&&)</li>
+                <li>OR (||)</li>
+                <li>NOT (!)</li>
+            </ul>
+
+            <p>
+                With this knowledge, try and answer the following questions, first with reall world applications and
+                then with programatic examples. Write down your answers so you can check them with us.
+            </p>
+            <ol>
+                <li>Auckland is in New Zealand and dogs can fly.</li>
+                <li>Auckland is in New Zealand or dogs can fly.</li>
+                <li>Today is not Wednesday</li>
+            </ol>
+            <p>Programatic Examples</p>
+            <ol>
+                <li>What is the result of the following expression: true || true</li>
+                <li>What is the result of the following expression: true || false</li>
+                <li>What is the result of the following expression: false || false</li>
+                <li>What is the result of the following expression: true && true</li>
+                <li>What is the result of the following expression: true && false</li>
+                <li>What is the result of the following expression: false && false</li>
+                <li>What is the result of the following expression: (true && false) || (true && true)</li>
+                <li>What is the result of the following expression: (true || false) && (true && true)</li>
+                <li>What is the result of the following expression: !true && false</li>
+            </ol>
+            <p>
+                If you are struggling with the programatic examples, try and write them out in plain english first or
+                try and write them in JavaSscript and see what happens.
+            </p>
+        </div>
+
+        <div id="ex3b" class="explanationBox">
+            <h2> Exercise B - If/ Else</h2>
+            <p>
+                The code you've been provided with let's the user type their age and then it tells them whether they are
+                old enough to enter a nightclub.
+                Your task is to modify it so that:
+            </p>
+            <ol>
+                <li>There’s another button that tells them if they are old enough to drink in america (21)</li>
+                <li>There’s a new box that asks them for their height, and tells them if they are tall enough to ride a
+                    roller coaster (140cm)</li>
+                <li>There’s a new box that asks them for their score on a test, and tells them if they got a NA (less
+                    than 50), an A (50 to 69), a M (70 to 89) or an E (90 and above).
+                </li>
+            </ol>
+            <h3>index.html</h3>
+            <div class="codeBox">
+                <pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt; Exercise 3A - If/Else &lt;/title&gt;
+    &lt;style&gt;
+        body {background-color: #aaf2bd; margin: 20%;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+
+    &lt;label for=&quot;age&quot;&gt;Age: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;your-age&quot; name=&quot;age&quot;&gt;
+    &lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;the-button&quot;&gt;Go to nightclub&lt;/button&gt;
+    
+    &lt;div id=&quot;answer-box&quot;&gt;
+        
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+            </pre>
+            </div>
+            <h3>main.js</h3>
+            <div class="codeBox">
+                <pre>
+document.getElementById(&quot;the-button&quot;).addEventListener(&quot;click&quot;, checkNightclub);
+function checkNightclub() {
+    var age = document.getElementById(&quot;your-age&quot;).value;
+    if (age &gt;= 18) {
+        document.getElementById(&quot;answer-box&quot;).innerHTML = &quot;Come on in! Let me take your coat&quot;;
+    } else {
+        document.getElementById(&quot;answer-box&quot;).innerHTML = &quot;You are not old enough to enter this nightclub. Scram!&quot;;
+    }
+} 
+                </pre>
+            </div>
+        </div>
+
+        <!-- Exercise 2 C -->
+        <div id="ex3c" class="explanationBox">
+            <h2> Exercise C - Leap Year</h2>
+            <p>
+                Write and test a program that takes a year as input and tells the user if the year they
+                entered is a leap year. These are the criteria for a leap year:
+            </p>
+            <ul>
+                <li>It is divisible by 4</li>
+                <li>It is not divisible by 100 unless it is also divisible by 400</li>
+                <li>It is after 1582, as there were no leap years before this time.</li>
+            </ul>
+            <p>The following information may be useful when you are testing.</p>
+            <ul>
+                <li>2000 is a leap year</li>
+                <li>1900 is not a leap year</li>
+                <li>2004 is a leap year</li>
+                <li>2003 is not a leap year</li>
+                <li>2024 is a leap year</li>
+            </ul>
+        </div>
+
+        <!-- Exercise 2 D -->
+        <div id="ex3d" class="explanationBox">
+            <h2> Exercise D - Ordering numbers</h2>
+            <p>
+                Write and test a program that takes in a test score and tells the user what grade they got.
+                The test score cutoffs are:
+            </p>
+            <ul>
+                <li>Not Achieved: less than 50</li>
+                <li>Achieved: 50 to 69</li>
+                <li>Merit: 70 to 89</li>
+                <li>Excellence: 90 and above</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Colour Schemes</p>
+        <button id="button_default">Default</button>
+        <button id="button_katelin">Katelin</button>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
