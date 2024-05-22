@@ -120,6 +120,61 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Change the nav to a mobile design when screen width is less than 845px*/
+@media screen and (max-width: 845px) {
+    .header ul {
+        display: none;
+    }
+
+    .header li {
+        display: block;
+        border: none;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .dropdown {
+        display: block;
+        border: none;
+    }
+
+    .dropbtn {
+        border: none;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: var(--secondary-color);
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        color: var(--header-text-color);
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: var(--hover-color);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: var(--hover-color);
+        transition: all 0.3s ease;
+    }
+}
+
 h3 {
     margin-bottom: 0;
 }
