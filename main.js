@@ -1,5 +1,6 @@
 function myFunction(element) {
-    navigator.clipboard.writeText(element.target.parentElement.children[1].innerText);
+    let text = element.target.parentElement.children[1].innerText;
+    navigator.clipboard.writeText(text);
     element.target.innerHTML = 'Copied!';
     setTimeout(() => {
         element.target.innerHTML = 'Copy';
@@ -48,3 +49,18 @@ function setKatelinColours() {
     localStorage.setItem('colour-mode', 'katelin');
     // console.log(localStorage.getItem('colour-mode'));
 }
+
+// function addNumbers(a, b) {
+//     return a + b;
+// }
+
+// function getRandomNumberBelow(max) {
+//     return Math.floor(Math.random() * max);
+// }
+
+// let sum = addNumbers(2, 3);
+// let num = getRandomNumberBelow(100);
+// let x = myFunction();
+// doSomething("Hello");
+
+

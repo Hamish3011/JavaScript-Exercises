@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <!-- For styling -->
+    <style>
+        table {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Use Table to Create Calculator Structure Design -->
+    <table id="calcu">
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td><input type="button" value="c" onclick="clearDisplay()" /> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="addToDisplay('1')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="2" onclick="addToDisplay('2')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="3" onclick="addToDisplay('3')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="/" onclick="addToDisplay('/')" onkeydown="myFunction(event)"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="addToDisplay('4')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="5" onclick="addToDisplay('5')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="6" onclick="addToDisplay('6')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="*" onclick="addToDisplay('*')" onkeydown="myFunction(event)"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="addToDisplay('7')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="8" onclick="addToDisplay('8')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="9" onclick="addToDisplay('9')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="-" onclick="addToDisplay('-')" onkeydown="myFunction(event)"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="addToDisplay('0')" onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="." onclick="addToDisplay('.')" onkeydown="myFunction(event)"> </td>
+
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"> </td>
+
+            <td><input type="button" value="+" onclick="addToDisplay('+')" onkeydown="myFunction(event)"> </td>
+        </tr>
+    </table>
+
+    <script>
+
+        // Function that display value 
+        function addToDisplay(val) {
+            // This should get the result input field and add the value to it
+            document.getElementById("result").value += val
+        }
+
+        var cal = document.getElementById("calcu");
+        cal.onkeyup = function (event) {
+            // Check if the key pressed is "Enter", this is keyCode 13. 
+            // If it is, call the solve function and pass it the value of the result input field
+            if (event.keyCode === 13) {
+                console.log("Enter");
+                let x = document.getElementById("result").value
+                console.log(x);
+                solve();
+            }
+        }
+
+        // Function that evaluates the digit and return result 
+        function solve(value) {
+            // Solve the equation in the result input field using the eval() function
+            // Replace the value of the result input field with the result of the equation
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+
+        // Function that clear the display 
+        function clearDisplay() {
+            // Clear the result input field
+            document.getElementById("result").value = ""
+        } 
+    </script>
+</body>
+
+</html>

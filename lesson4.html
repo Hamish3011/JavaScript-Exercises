@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 12 JavaScript Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>JavaScript Exercises</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="index.html">Lesson 1</a></button>
+                <div class="dropdown-content">
+                    <a href="index.html#ex1a">Exercise 1-A</a>
+                    <a href="index.html#ex1b">Exercise 1-B</a>
+                    <a href="index.html#ex1c">Exercise 1-C</a>
+                    <a href="index.html#ex1d">Exercise 1-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson2.html">Lesson 2</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson2.html#ex2a">Exercise 2-A</a>
+                    <a href="lesson2.html#ex2b">Exercise 2-B</a>
+                    <a href="lesson2.html#ex2c">Exercise 2-C</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson3.html">Lesson 3</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson3.html#ex3a">Exercise 3-A</a>
+                    <a href="lesson3.html#ex3b">Exercise 3-B</a>
+                    <a href="lesson3.html#ex3c">Exercise 3-C</a>
+                    <a href="lesson3.html#ex3d">Exercise 3-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn current_page"><a href="lesson4.html">Lesson 4</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson4.html#ex4a">Exercise 4-A</a>
+                    <a href="lesson4.html#ex4b">Exercise 4-B</a>
+                    <a href="lesson4.html#ex4c">Exercise 4-C</a>
+                    <a href="lesson4.html#ex4d">Exercise 4-D</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+
+        <div id="ex3a" class="explanationBox">
+            <h2>Exercise 4A - Sing Happy Birthday</h2>
+            <p>
+                Write a program that takes in a name and sings happy birthday to that person.
+            </p>
+            <p>Hint: Use the alert() function to sing happy birthday so that it appears on screen.</p>
+            <p>Here is some starter code to get you going.</p>
+            <h3>index.html</h3>
+            <div class="codeBox">
+                <pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt; Exercise 4A - Singing &lt;/title&gt;
+    &lt;style&gt;
+        body {background-color: #aaf2bd; margin: 20%;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;label for=&quot;name&quot;&gt;Name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;your-name&quot; name=&quot;name&quot;&gt;
+    &lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;the-button&quot;&gt;Sing!&lt;/button&gt;
+    
+    &lt;div id=&quot;answer-box&quot;&gt;
+        
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+            </pre>
+            </div>
+            <h3>main.js</h3>
+            <div class="codeBox">
+                <pre>
+document.getElementById(&quot;the-button&quot;).addEventListener(&quot;click&quot;, singHappyBirthday);
+function singHappyBirthday() {
+    var name = document.getElementById(&quot;your-name&quot;).value;
+    // Code to sing happy birthday here
+    alert("Hello");
+} 
+                </pre>
+            </div>
+        </div>
+
+        <!-- Exercise 4B -->
+        <div id="ex4b" class="explanationBox">
+            <h2> Exercise 4B - Dog years</h2>
+            <p>Write a program similar to that in lesson 2. This will calculate your age in dog years.</p>
+            <p>Hint: Multiply your age by 7 to get your age in dog years.</p>
+        </div>
+
+        <div id="ex4c" class="explanationBox">
+            <h2>Exercise 4C - Converting between units</h2>
+            <p>
+                Write a program that lets users convert between different units of measurement. The user should be able
+                to convert between:
+            </p>
+            <ul>
+                <li>Centimetres and inches - times by 0.393701</li>
+                <li>Kilometres and miles - times by 0.621371</li>
+                <li>Kilograms and pounds - times by 2.20462</li>
+                <li>Minutes and seconds - times by 60</li>
+                <li>Days and hours - times by 12</li>
+            </ul>
+            <p>Hint: Write a function that takes a value and a conversion rate as input.</p>
+            <p>Extension: Can you make it so that you can convert in the other direction?</p>
+        </div>
+
+
+
+        <!-- Exercise 4D -->
+        <div id="ex4d" class="explanationBox">
+            <h2> Exercise 4D - A Calculator</h2>
+            <p>Copy the starter code and read through it to see what is happening. Check your understanding, talk to one
+                of us or ask your neighbour if you don't understand what is going on.</p>
+            <p>Use the comments in main.js to create a working calculator. You will need to use the documentation to
+                investigate how some functions work.</p>
+
+            <h3>index.html</h3>
+            <div class="codeBox">
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Exercise 4D - Calculator&lt;/title&gt;
+    &lt;!-- For styling --&gt;
+    &lt;style&gt;
+        table {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type=&quot;button&quot;] {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type=&quot;text&quot;] {
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;!-- Use Table to Create Calculator Structure Design --&gt;
+    &lt;table id=&quot;calcu&quot;&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;3&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;result&quot;&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;c&quot; onclick=&quot;clearDisplay()&quot; /&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;1&quot; onclick=&quot;addToDisplay('1')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;2&quot; onclick=&quot;addToDisplay('2')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;3&quot; onclick=&quot;addToDisplay('3')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;/&quot; onclick=&quot;addToDisplay('/')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;4&quot; onclick=&quot;addToDisplay('4')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;5&quot; onclick=&quot;addToDisplay('5')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;6&quot; onclick=&quot;addToDisplay('6')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;*&quot; onclick=&quot;addToDisplay('*')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;7&quot; onclick=&quot;addToDisplay('7')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;8&quot; onclick=&quot;addToDisplay('8')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;9&quot; onclick=&quot;addToDisplay('9')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;-&quot; onclick=&quot;addToDisplay('-')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;0&quot; onclick=&quot;addToDisplay('0')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;.&quot; onclick=&quot;addToDisplay('.')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+
+            &lt;!-- solve function call function solve to evaluate value --&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;=&quot; onclick=&quot;solve()&quot;&gt; &lt;/td&gt;
+
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;+&quot; onclick=&quot;addToDisplay('+')&quot; onkeydown=&quot;myFunction(event)&quot;&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+    
+&lt;/body&gt;
+
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+                </pre>
+            </div>
+            <h3>main.js</h3>
+            <div class="codeBox">
+                <pre>
+// Function that display value 
+function addToDisplay(val) {
+    // This should get the result input field and add the value to it
+}
+
+var cal = document.getElementById(&quot;calcu&quot;);
+cal.onkeyup = function (event) {
+    // Check if the key pressed is &quot;Enter&quot;, this is keyCode 13. 
+    // If it is, call the solve function and pass it the value of the result input field
+}
+
+// Function that evaluates the digit and return result 
+function solve(value) {
+    // Solve the equation in the result input field using the eval() function
+    // Replace the value of the result input field with the result of the equation
+}
+
+// Function that clear the display 
+function clearDisplay() {
+    // Clear the result input field
+} 
+                </pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Colour Schemes</p>
+        <button id="button_default">Default</button>
+        <button id="button_katelin">Katelin</button>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
