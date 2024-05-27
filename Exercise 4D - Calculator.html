@@ -84,9 +84,9 @@
             // If it is, call the solve function and pass it the value of the result input field
             if (event.keyCode === 13) {
                 console.log("Enter");
-                let x = document.getElementById("result").value
+                let x = document.getElementById("result").value;
                 console.log(x);
-                solve();
+                solve(x);
             }
         }
 
@@ -94,9 +94,9 @@
         function solve(value) {
             // Solve the equation in the result input field using the eval() function
             // Replace the value of the result input field with the result of the equation
-            let x = document.getElementById("result").value
-            let y = eval(x)
-            document.getElementById("result").value = y
+            // let x = document.getElementById("result").value
+            let y = eval(value);
+            document.getElementById("result").value = y;
         }
 
         // Function that clear the display 
