@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 12 JavaScript Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>JavaScript Exercises</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="index.html">Lesson 1</a></button>
+                <div class="dropdown-content">
+                    <a href="index.html#ex1a">Exercise 1-A</a>
+                    <a href="index.html#ex1b">Exercise 1-B</a>
+                    <a href="index.html#ex1c">Exercise 1-C</a>
+                    <a href="index.html#ex1d">Exercise 1-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson2.html">Lesson 2</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson2.html#ex2a">Exercise 2-A</a>
+                    <a href="lesson2.html#ex2b">Exercise 2-B</a>
+                    <a href="lesson2.html#ex2c">Exercise 2-C</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson3.html">Lesson 3</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson3.html#ex3a">Exercise 3-A</a>
+                    <a href="lesson3.html#ex3b">Exercise 3-B</a>
+                    <a href="lesson3.html#ex3c">Exercise 3-C</a>
+                    <a href="lesson3.html#ex3d">Exercise 3-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn "><a href="lesson4.html">Lesson 4</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson4.html#ex4a">Exercise 4-A</a>
+                    <a href="lesson4.html#ex4b">Exercise 4-B</a>
+                    <a href="lesson4.html#ex4c">Exercise 4-C</a>
+                    <a href="lesson4.html#ex4d">Exercise 4-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn current_page"><a href="lesson5.html">Lesson 5</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson5.html#ex5a">Exercise 5-A</a>
+                    <a href="lesson5.html#ex5b">Exercise 5-B</a>
+                    <a href="lesson5.html#ex5c">Exercise 5-C</a>
+                    <a href="lesson5.html#ex5d">Exercise 5-D</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+
+        <div id="ex5a" class="explanationBox">
+            <h2>Exercise 5A - Learning about lists.</h2>
+            <p>
+                Write a program that uses lists to display the menu for the Fiordland Girls' High School hostel!
+            </p>
+            <p>Here is some starter code to get you going.</p>
+            <h3>index.html</h3>
+            <div class="codeBox">
+                <pre>
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt; Exercise 5A - Basic Lists &lt;/title&gt;
+	&lt;style&gt;
+		body {background-color: #aaf2bd; margin: 20%;}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt; Welcome to the Fiordland Girls' High School Hostel's Website!!! &lt;/h1&gt;
+
+	&lt;button type=&quot;button&quot; id=&quot;the-button&quot;&gt;Reveal this week's food menu&lt;/button&gt;
+	
+	&lt;table&gt;
+		&lt;tr&gt;
+		&lt;th&gt;Day&lt;/th&gt;
+		&lt;th&gt;Food&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		&lt;td&gt;Monday&lt;/td&gt;
+		&lt;td id=&quot;monday-gap&quot;&gt;???&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		&lt;td&gt;Tuesday&lt;/td&gt;
+		&lt;td id=&quot;tuesday-gap&quot;&gt;???&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		&lt;td&gt;Wednesday&lt;/td&gt;
+		&lt;td id=&quot;wednesday-gap&quot;&gt;???&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		&lt;td&gt;Thursday&lt;/td&gt;
+		&lt;td id=&quot;thursday-gap&quot;&gt;???&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		&lt;td&gt;Friday&lt;/td&gt;
+		&lt;td id=&quot;friday-gap&quot;&gt;???&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+                </pre>
+            </div>
+            <h3>main.js</h3>
+            <div class="codeBox">
+                <pre>
+const menu = [&quot;Lasagna&quot;, &quot;Butter Chicken&quot;, &quot;Mexican Wraps&quot;, &quot;Roast Chicken&quot;, &quot;Corn on the Cob&quot;]
+
+document.getElementById(&quot;the-button&quot;).addEventListener(&quot;click&quot;, revealMenu);
+function revealMenu(){
+	document.getElementById(&quot;monday-gap&quot;).innerHTML = menu[0];
+}		
+                </pre>
+            </div>
+        </div>
+
+        <!-- Exercise 5B -->
+        <div id="ex5b" class="explanationBox">
+            <h2> Exercise 5B - Muffin ideas</h2>
+            <p>Mr Nickholds also teaches Year 9s and 10s food technology. Their major project for the semester is to
+                create a new muffin recipe, but some of them struggle to come up with ideas. Your task is to make a
+                website that generates muffin ideas for them by putting together two random words.</p>
+            <p>To get you started here are some pre-written lists of muffin fillings.</p>
+            <p>Hint: Use the documentation to research the .concat method to join the lists together.</p>
+            <div class="codeBox">
+                <pre>
+let flavours1 = [&quot;Chocolate&quot;, &quot;Milk Chocolate&quot;, &quot;White Chocolate&quot;, &quot;Dark Chocolate&quot;, &quot;Caramel&quot;, &quot;Maple Syrup&quot;, &quot;Golden Syrup&quot;, &quot;Honey&quot;, &quot;Hokey-Pokey&quot;, &quot;Honeycomb&quot;, &quot;Choc-Chip&quot;, &quot;Salted Caramel&quot;, &quot;Fudge&quot;, &quot;Jaffa&quot;, &quot;Jam&quot;, &quot;Lemonade&quot;, &quot;Cola&quot;, &quot;Ice-Cream&quot;, &quot;Rocky-Road&quot;, &quot;Toffee&quot;, &quot;Sour Candy&quot;, &quot;Vanilla&quot;, &quot;Oreo&quot;, &quot;Malteaser&quot;, &quot;M&amp;M&quot;]
+let flavours2 = [&quot;Apple&quot;, &quot;Pear&quot;, &quot;Blueberry&quot;, &quot;Raspberry&quot;, &quot;Strawberry&quot;, &quot;Loganberry&quot;, &quot;Boysenberry&quot;, &quot;Blackberries&quot;, &quot;Banana&quot;, &quot;Mango&quot;, &quot;Lemon&quot;, &quot;Orange&quot;, &quot;Lime&quot;, &quot;Apricot&quot;, &quot;Peach&quot;, &quot;Plum&quot;, &quot;Cherry&quot;, &quot;Honeydew&quot;, &quot;Date&quot;, &quot;Sultana&quot;, &quot;Feijoa&quot;, &quot;Coconut&quot;, &quot;Pomegranate&quot;, &quot;Guava&quot;, &quot;Fig&quot;, &quot;Passionfruit&quot;, &quot;Rhubarb&quot;, &quot;Prune&quot;];
+let flavours3 = [&quot;Ham&quot;, &quot;Cheese&quot;, &quot;Bacon&quot;, &quot;Feta&quot;, &quot;Chicken&quot;, &quot;Salami&quot;, &quot;Zucchini&quot;, &quot;Pumpkin&quot;, &quot;Carrot&quot;, &quot;Tomato&quot;, &quot;Corn&quot;, &quot;Kumara&quot;, &quot;Olive&quot;, &quot;Tofu&quot;, &quot;Fish&quot;, &quot;Potato&quot;, &quot;Avocado&quot;, &quot;Bran&quot;, &quot;Pesto&quot;, &quot;Camembert&quot;, &quot;Mint&quot;, &quot;Rose&quot;];
+let flavours4 = [&quot;Walnut&quot;, &quot;Peanut Butter&quot;, &quot;Cashew&quot;, &quot;Pistachio&quot;, &quot;Almond&quot;, &quot;Macademia&quot;, &quot;Poppy&quot;, &quot;Sunflower&quot;, &quot;Sesame&quot;];
+let flavours5 = [&quot;Ginger&quot;, &quot;Cinnamon&quot;, &quot;Sour Cream&quot;, &quot;Yoghurt&quot;, &quot;Coffee&quot;, &quot;Rosemary&quot;, &quot;Lavendar&quot;, &quot;Horopito&quot;, &quot;Nutmeg&quot;, &quot;ANZAC&quot;, &quot;Wholemeal&quot;, &quot;Black Forest&quot;, &quot;Chilli&quot;, &quot;Gingerbread&quot;, &quot;Pizza&quot;, &quot;Hot Cross&quot;, &quot;Cappuccino&quot;];
+               </pre>
+            </div>
+        </div>
+
+        <div id="ex5c" class="explanationBox">
+            <h2>Exercise 5C - Converting between units</h2>
+            <p>So far all of our lists have been premade, but this time we’re going to let the user add items to the
+                list!
+            </p>
+            <p>
+                Your task is to build a website that lets the user “simulate” the life of them and their friends. The
+                user should type in a list of a few people, then when they say they are ready the website generates a
+                story using that list of people.
+            </p>
+            <p>To do this, you might need to look into some new things in the documentation such as:</p>
+            <ul>
+                <li>Adding to a list.</li>
+                <li>How to find the length of a list.</li>
+            </ul>
+            <p>Check out this site from Mr Nicholds if you need some inspiration but no peeking at the code.</p>
+            <a href="https://sghsdigitaltech.github.io/life-simulator">
+                <p>https://sghsdigitaltech.github.io/life-simulator</p>
+            </a>
+        </div>
+
+
+
+        <!-- Exercise 4D -->
+        <div id="ex5d" class="explanationBox">
+            <h2> Exercise 5D - Commenting</h2>
+            <p>A comment in JavaScript is a way of telling other people how you code works. There are 2 ways to write a
+                comment in JavaScript.</p>
+            <p>1) A single line comment. Everything after the // will not be executed.</p>
+            <p>2) A multi line comment. Everything between /* and */ will not be executed.</p>
+            <div class="codeBox">
+                <pre>
+// Some examples of commenting
+console.log("This code will be executed");
+//console.log("This code will not be executed");
+/* This line will not do anything
+console.log("Neither will this");
+*/
+console.log("but this will");
+                </pre>
+            </div>
+            <p>Go through and comment the exercises from today to explain what they do and how they work.</p>
+            <p>Any code you write from this point forward should be commented :)</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Colour Schemes</p>
+        <button id="button_default">Default</button>
+        <button id="button_katelin">Katelin</button>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
