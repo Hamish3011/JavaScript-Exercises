@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 12 JavaScript Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>JavaScript Exercises</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="index.html">Lesson 1</a></button>
+                <div class="dropdown-content">
+                    <a href="index.html#ex1a">Exercise 1-A</a>
+                    <a href="index.html#ex1b">Exercise 1-B</a>
+                    <a href="index.html#ex1c">Exercise 1-C</a>
+                    <a href="index.html#ex1d">Exercise 1-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson2.html">Lesson 2</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson2.html#ex2a">Exercise 2-A</a>
+                    <a href="lesson2.html#ex2b">Exercise 2-B</a>
+                    <a href="lesson2.html#ex2c">Exercise 2-C</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson3.html">Lesson 3</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson3.html#ex3a">Exercise 3-A</a>
+                    <a href="lesson3.html#ex3b">Exercise 3-B</a>
+                    <a href="lesson3.html#ex3c">Exercise 3-C</a>
+                    <a href="lesson3.html#ex3d">Exercise 3-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson4.html">Lesson 4</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson4.html#ex4a">Exercise 4-A</a>
+                    <a href="lesson4.html#ex4b">Exercise 4-B</a>
+                    <a href="lesson4.html#ex4c">Exercise 4-C</a>
+                    <a href="lesson4.html#ex4d">Exercise 4-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="lesson5.html">Lesson 5</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson5.html#ex5a">Exercise 5-A</a>
+                    <a href="lesson5.html#ex5b">Exercise 5-B</a>
+                    <a href="lesson5.html#ex5c">Exercise 5-C</a>
+                    <a href="lesson5.html#ex5d">Exercise 5-D</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn current_page"><a href="lesson5.html">Lesson 6</a></button>
+                <div class="dropdown-content">
+                    <a href="lesson6.html#ex6a">Exercise 6-A</a>
+                    <a href="lesson6.html#ex6b">Exercise 6-B</a>
+                    <a href="lesson6.html#ex6c">Exercise 6-C</a>
+                    <a href="lesson6.html#ex6d">Exercise 6-D</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+
+        <div id="ex6a" class="explanationBox">
+            <h2>Exercise 6A - Learning to debug.</h2>
+            <p>A key part of programming in JavaScript and actually programming in general is debugging.
+                Debugging is the process of finding and fixing errors in your code. This can be done in a number of ways
+                such as:</p>
+            <ul>
+                <li>Using console.log to print out the value of variables.</li>
+                <li>Using the browser's developer tools to inspect the values of variables.</li>
+                <li>Using the browser's console to see if there are any errors in the code.</li>
+                <li>Many other ways that you will develop with practice.</li>
+            </ul>
+            <p>For the exercises today we are going to work in pairs. This is called peer programming and is often an
+                excellent way to debug programs especially if you are struggling to find an error.</p>
+            <p>For this exercise, you are given a piece of code that is not working correctly. Your task is to find
+                the errors and fix it. Copy the code below into a new file and run it to work out what needs fixed.</p>
+            <div class="codeBox">
+                <pre>
+    // This code should print Bob to the console.
+    var name = &quot;Bob&quot;;
+    if (name == Bob) {
+        consoloe.log(Name);
+    }
+    
+    // fix this code so that the price is expensive.
+    var price = 105;
+    if(price &gt; 100) {
+      console.log(&quot;Expensive&quot;);
+    else {
+      console.log(&quot;Affordable&quot;);
+    }
+    
+    // This code should print &quot;Equal&quot; if the two numbers are the same.
+    // Hint you may have to call the solve function to find the error.
+    function solve(num1, num2) {
+        const isEqual = &quot;Equal&quot;;
+        if(num1 === num2) {
+           isEqual = &quot;Equal&quot;;
+        } else {
+           isEqual = &quot;Not Equal&quot;;
+        }
+        console.log(isEqual);
+    }
+    
+    // This function should print &quot;the number is greater than 10&quot; if the number is greater than 10.
+    function check(n) {
+      if (n &lt; 7) {
+        console.log(&quot;the number is greater than 10&quot;)
+      } else {
+        console.log(&quot;the number is smaller than or equal to 10&quot;);
+      }
+    }
+                    </pre>
+            </div>
+
+        </div>
+
+        <!-- Exercise 5B -->
+        <div id="ex6b" class="explanationBox">
+            <h2> Exercise 5B - More Debugging practice...</h2>
+            <p>Here is more broken code for you to fix.</p>
+            <h3>index.html</h3>
+            <div class="codeBox">
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Calculator&lt;/title&gt;
+    &lt;!-- For styling --&gt;
+    &lt;style&gt;
+        table {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type=&quot;button&quot;] {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type=&quot;text&quot;] {
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;!-- Use Table to Create Calculator Structure Design --&gt;
+    &lt; id=&quot;calcu&quot;&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;3&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;result&quot;&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;c&quot; onclick=&quot;clearDisplay()&quot; /&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;1&quot; onclick=&quot;add_to_display('1')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;2&quot; onclick=&quot;add_to_display('2')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;3&quot; onclick=&quot;add_to_display('3')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;/&quot; onclick=&quot;add_to_display('/')&quot;&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;4&quot; onclick=&quot;addToDisplay('4')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;5&quot; onclick=&quot;addToDisplay('5')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;6&quot; onclick=&quot;addToDisplay('6')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;*&quot; onclick=&quot;addToDisplay('*')&quot;&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;7&quot; onclick=&quot;addToDisplay('7')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;8&quot; onclick=&quot;addToDisplay('8')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;9&quot; onclick=&quot;addToDisplay('9')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;-&quot; onclick=&quot;addToDisplay('-')&quot;&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;0&quot; onclick=&quot;addToDisplay('0')&quot;&gt; &lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;.&quot; onclick=&quot;addToDisplay('.')&quot;&gt; &lt;/td&gt;
+
+            &lt;!-- solve function call function solve to evaluate value --&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;=&quot; onclick=&quot;solve()&quot;&gt; &lt;/td&gt;
+
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;+&quot; onclick=&quot;addToDisplay('+')&quot;&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;script src=&quot;&quot;&gt;&lt;/script&gt;
+
+&lt;/html&gt;
+                </pre>
+            </div>
+            <h3>main.js</h3>
+            <div class="codeBox">
+                <pre>
+// Function that display value 
+function addToDisplay(val) {
+    // This should get the result input field and add the value to it
+    document.getElementById(&quot;result&quot;).value += newNumber
+}
+
+// Function that evaluates the digit and return result 
+function solve() {
+    // Solve the equation in the result input field using the eval() function
+    // Replace the value of the result input field with the result of the equation
+    let x = document.getElementById(&quot;result&quot;).value
+    let y = eval(value);
+    document.getElementById(&quot;result&quot;).value += y;
+}
+
+// Function that clear the display 
+function clearDisplay() {
+    // Clear the result input field
+    document.getElementById(&quot;result&quot;).value = &quot;Hello&quot;
+} 		
+                </pre>
+            </div>
+        </div>
+
+        <div id="ex6c" class="explanationBox">
+            <h2>Exercise 6C - Even more debugging practice...</h2>
+            <p>Here is a website from LaunchCode Education that has a number of exercises for you to work through. These
+                exercises are designed to help you practice debugging code.</p>
+            <a
+                href="https://education.launchcode.org/intro-to-professional-web-dev/chapters/errors-and-debugging/exercises.html">
+                <p>https://education.launchcode.org/intro-to-professional-web-dev/chapters/errors-and-debugging/exercises.html
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Colour Schemes</p>
+        <button id="button_default">Default</button>
+        <button id="button_katelin">Katelin</button>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
