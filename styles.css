@@ -22,7 +22,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     background-color: var(--secondary-color);
 }
 
@@ -32,13 +32,18 @@ body {
     margin: 0;
 }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+}
+
 /* Dropdown Button */
 .dropbtn {
     color: var(--header-text-color);
     padding: 16px;
     font-size: 16px;
     border: none;
-    border-left: var(--hover-color) 1px solid;
     height: 100%;
     background-color: var(--secondary-color);
     transition: all 0.3s ease;
@@ -65,7 +70,6 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0;
     background-color: var(--secondary-color);
     min-width: 160px;
     z-index: 1;
@@ -99,6 +103,10 @@ body {
 /* Change the nav to a mobile design when screen width is less than 845px*/
 @media screen and (max-width: 845px) {
     .header {
+        display: block;
+    }
+
+    nav {
         display: block;
     }
 

@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn current_page"><a href="lesson2.html">Lesson 2</a></button>
+                <button class="dropbtn"><a href="lesson2.html">Lesson 2</a></button>
                 <div class="dropdown-content">
                     <a href="lesson2.html#ex2a">Exercise 2-A</a>
                     <a href="lesson2.html#ex2b">Exercise 2-B</a>
@@ -66,12 +66,11 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn"><a href="lesson7.html">Lesson 7</a></button>
+                <button class="dropbtn current_page"><a href="lesson7.html">Lesson 7</a></button>
                 <div class="dropdown-content">
                     <a href="lesson7.html#exa">Exercise 7-A</a>
                     <a href="lesson7.html#exb">Exercise 7-B</a>
                     <a href="lesson7.html#exc">Exercise 7-C</a>
-                    <a href="lesson7.html#exd">Exercise 7-D</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -83,95 +82,87 @@
         </nav>
     </div>
     <div class="main">
-        <div id="ex2a" class="explanationBox">
-            <h2> Exercise A - Input and Output</h2>
+
+        <div id="exa" class="explanationBox">
+            <h2>Exercise 7A - Time Delay functions.</h2>
             <p>
-                Copy the starter code given below and adjust it so that it can complete the following tasks:
+                Sometimes we want a certain piece of Javascript Code to run only after a certain length of time has
+                passed. For example some sites use this to make an annoying popup appear asking you to sign up to their
+                newsletter.
             </p>
-            <ol>
-                <li>It also replies back with their last name.</li>
-                <li>It tells them how old they are in dog years (their age times 7)</li>
-                <li>It has an extra field to answer another question of your choice, and then does something with
-                    that
-                    question</li>
-            </ol>
-            <h3>index.html</h3>
+            <p>
+                You’re going to use your powers to do something more fun. You’re going to make a website where the site
+                gets spookier with time.
+            </p>
+            <p>
+                Check out <a target="_blank"
+                    href="https://sghsdigitaltech.github.io/examples/overlook-hotel/overlook-hotel">Overlook
+                    Hotel</a> a website Mr Nickholds made to get an idea of what to do (DON’T peek at the code) then
+                look at the code below for an idea of how to do that.
+            </p>
+            <p>What does the code below do? HINT: It's not 6000 seconds, but what is it?</p>
             <div class="codeBox">
                 <pre>
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;title&gt; Exercise 1-D - Input and Output &lt;/title&gt;
-    &lt;style&gt;
-        body {
-            background-color: #034217;
-            margin: 20%;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-
-    &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; id=&quot;first-name&quot; name=&quot;fname&quot;&gt;
-    &lt;br&gt; &lt;br&gt; &lt;br&gt;
-
-    &lt;label for=&quot;age&quot;&gt;Age: &lt;/label&gt;
-    &lt;input type=&quot;text&quot; id=&quot;your-age&quot; name=&quot;age&quot;&gt;
-    &lt;br&gt; &lt;br&gt; &lt;br&gt;
-
-    &lt;button type=&quot;button&quot; id=&quot;the-button&quot;&gt;Generate Replies&lt;/button&gt;
-
-    &lt;div id=&quot;answer-box&quot;&gt;
-
-    &lt;/div&gt;
-&lt;/body&gt;
-
-&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
-
-&lt;/html&gt;
-            </pre>
+setTimeout( function () {
+    document.getElementById(&quot;main-heading&quot;).style.color = &quot;red&quot;;
+}, 6000);
+                    </pre>
             </div>
-            <h3>main.js</h3>
+
+        </div>
+
+        <!-- Exercise 7B -->
+        <div id="exb" class="explanationBox">
+            <h2> Exercise 7B - Pereodic Functions</h2>
+            <p>
+                Sometimes we want a certain piece of Javascript Code to run again and again, over and over, every time a
+                certain length of time passes. For example some sites use this to have a gallery of images that
+                automatically changes every 5 seconds on their front page. And that’s exactly what I want you to do.
+            </p>
+            <p>
+                You can check out an example from Mr Nickholds <a
+                    href="https://sghsdigitaltech.github.io/examples/rooster-of-the-month/index.html">here</a> (same
+                rules as always). And then below are two different pieces of example code to look at that might help:
+            </p>
+            <p>What does the code below do? HINT: It's a song from 1997...</p>
             <div class="codeBox">
                 <pre>
-document.getElementById(&quot;the-button&quot;).addEventListener(&quot;click&quot;, generateReplies);
-function generateReplies() {
-    var name = document.getElementById(&quot;first-name&quot;).value;
-    document.getElementById(&quot;answer-box&quot;).innerHTML = &quot;Nice to meet you &quot; + name + &quot;!&quot;;
-}
+setInterval(function() {
+    document.getElementById(&quot;song-lyrics&quot;).innerHTML += &quot;&lt;br&gt;Around the world, around the world&quot;;
+}, 1000);
                 </pre>
             </div>
+            <p>What does the code below do? No hints this time...</p>
+            <div class="codeBox">
+                <pre>
+var textSize = 20;
+setInterval(function() {
+        textSize += 10;
+        document.getElementById("main-heading").style.fontSize = textSize + "px";
+    }, 1000);                    
+                </pre>
+            </div>
+            <h3>Extra Challenge</h3>
+            <p>Finished the basic version with just a changing image? Improve your website so that it has a changing
+                caption to go with it (like my descriptions of the roosters).
+            </p>
+            <h3>Extra extra Challenge</h3>
+            <p>
+                Finished the advanced version? Make sure that your image gallery LOOPS (as in, after showing the last
+                image it goes back to the first)
+            </p>
         </div>
 
-        <!-- Exercise 2 B -->
-        <div id="ex2b" class="explanationBox">
-            <h2> Exercise B - Randomness</h2>
+        <div id="exc" class="explanationBox">
+            <h2>That's all the new stuff for today!</h2>
             <p>
-                This time you don't get any starter code!
+                The rest of today is an opportunity for you to go back and catch up on any exercises you haven't
+                finished or missed out on.
             </p>
             <p>
-                Your task is to make a website with a button, that each time they press it will give a random fortune
-                out of 5 options.
+                If you're all caught up, you can start working on the next lesson which is a check in project that
+                includes everything we have learnt so far.
             </p>
-            <p>
-                If you are struggling to get started, have a look at the Math.random() function in the JavaScript
-                documentation.
-            </p>
-        </div>
-
-        <!-- Exercise 2 C -->
-        <div id="ex2c" class="explanationBox">
-            <h2> Exercise C - Randomness expanded</h2>
-            <p>
-                Continue from the previous exercise and expand your program to include the following:
-            </p>
-            <ol>
-                <li>It should tell them their fortune in a sentence.</li>
-                <li>It should also tell them how many times they have pressed the button.</li>
-                <li>Show me another feature that uses variables and or randomness.</li>
-            </ol>
         </div>
     </div>
 
