@@ -75,13 +75,13 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn current_page"><a href="lesson8.html">Lesson 8</a></button>
+                <button class="dropbtn"><a href="lesson8.html">Lesson 8</a></button>
                 <div class="dropdown-content">
                     <a href="lesson8.html#exa">Exercise 8</a>
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn"><a href="class-example.html">Class Example</a></button>
+                <button class="dropbtn current_page"><a href="class-example.html">Class Example</a></button>
                 <div class="dropdown-content">
                     <a href="class-example.html#exa">Class Example</a>
                 </div>
@@ -91,47 +91,166 @@
     <div class="main">
 
         <div id="exa" class="explanationBox">
-            <h2>Exercise 8 - Checkpoint project: Cooking Assistant Website.</h2>
+            <h2>Class Worked Example - Rock Paper Scissors</h2>
             <p>
-                This is a checkpoint project to let me (and you!) see how you have gone at the learning so far. Over the
-                past exercises you have hopefully learnt how to use Javascript to:
+                We are going to create a simple Rock Paper Scissors game using HTML, CSS and JavaScript as a class.
             </p>
-            <ul>
-                <li>Receive input from the user</li>
-                <li>Change HTML or CSS in response to click events</li>
-                <li>Perform calculations and use selection (IF statements) to control programs</li>
-                <li>Add random elements</li>
-                <li>Read items from lists</li>
-                <li>Add items from lists</li>
-                <li>Add time delay functions</li>
-                <li>Add periodic functions</li>
-            </ul>
-            <p>This project will test your knowledge of these skills, as well as good programming practice in general.
-                Based on this we will give you feedback on areas to improve :)
+            <p>
+                We will focus on the JavaScript code for this example but also how to go about getting started and the
+                process of iterative development.
             </p>
-            <h3>Your Brief</h3>
-            <p>Create a "cooking assistant" website which has the following features:</p>
-            <ul>
-                <li>A random meal suggestion appears each time you load the page and on button click.</li>
-                <li>An image which changes every 5 seconds.
-                    <ul>
-                        <li>Bonus points if it loops back to the start when done.</li>
-                    </ul>
-                </li>
-                <li>Boxes that allow the user to type in a measurement to convert to a different unit.</li>
-                <li>A button that allows the user to switch between "day mode" and "night mode".
-                    <ul>
-                        <li>Bonus points if you can make it remember their choice when the page reloads. Although
-                            warning - that's a little tricky!</li>
-                    </ul>
-                </li>
-                <li>Any other features you can think of to add.</li>
-            </ul>
-            <p>Good luck!</p>
+            <h3>index.html</h3>
+            <div class="codeBox">
+                <pre>
+&lt;!-- index.html --&gt;
 
-            Note: It’s important to have good comments and testing to get higher marks, and also to follow some
-            Javascript conventions in your programming. If you have any questions about these - please ask!!!!!!!!!!
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
 
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, 
+                initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+    &lt;title&gt;Rock Paper Scissor&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;section class=&quot;game&quot;&gt;
+        &lt;!--Title --&gt;
+        &lt;div class=&quot;title&quot;&gt;Rock Paper Scissor&lt;/div&gt;
+
+        &lt;div class=&quot;move&quot;&gt;Choose your move&lt;/div&gt;
+
+        &lt;!--Options available to player to play game --&gt;
+        &lt;div class=&quot;options&quot;&gt;
+            &lt;button class=&quot;rock&quot;&gt;Rock&lt;/button&gt;
+            &lt;button class=&quot;paper&quot;&gt;Paper&lt;/button&gt;
+            &lt;button class=&quot;scissor&quot;&gt;Scissors&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;!--Final result of game --&gt;
+        &lt;p class=&quot;result&quot;&gt;&lt;/p&gt;
+
+    &lt;/section&gt;
+
+    &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                </pre>
+            </div>
+            <h3>styles.css</h3>
+            <div class="codeBox">
+                <pre>
+/* styles.css */
+/* universal selector - Applies to whole document */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #082c6c;
+    color: #fff;
+}
+
+/* To center everything in game */
+.game {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title of the game */
+.title {
+    position: absolute;
+    top: 0;
+    font-size: 4rem;
+    z-index: 2;
+}
+
+/* Score Board */
+.score {
+    display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+}
+
+/* Score */
+.p-count,
+.c-count {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* displaying three buttons in one line */
+.options {
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+/* Styling on all three buttons */
+.rock,
+.paper,
+.scissor {
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.move {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Reload button style */
+.reload {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 612px) {
+    .title {
+        text-align: center;
+    }
+
+    .score {
+        position: absolute;
+        top: 200px;
+        width: 100vw;
+    }
+
+    .options {
+        width: 100vw;
+    }
+}		
+                </pre>
+            </div>
         </div>
     </div>
 
